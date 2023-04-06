@@ -17,12 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
         working = findViewById(R.id.calcWork);
         working.setShowSoftInputOnFocus(false);
-        working.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (getString(R.string.calcWork).equals(working.getText().toString())) {
-                    working.setText("");
-                }
+        working.setOnClickListener(view -> {
+            if (getString(R.string.calcWork).equals(working.getText().toString())) {
+                working.setText("");
             }
         });
     }
